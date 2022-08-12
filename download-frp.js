@@ -12,7 +12,7 @@ const getJSON = bent("json", {
 const platform = os.platform()
 const arch = os.arch()
 let osRelease = null
-
+if(platform === "windows" && arch === "x64") arch = "amd64";
 switch (platform) {
   case "win32":
     osRelease = `windows_${arch}`
