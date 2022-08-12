@@ -9,8 +9,8 @@ const getJSON = bent("json", {
   "User-Agent": "seveibar, frpc-bin (an npm module)",
 })
 
-const platform = os.platform()
-const arch = os.arch()
+let platform = os.platform()
+let arch = os.arch()
 let osRelease = null
 if( (platform === "windows" || platform === "win32") && arch === "x64") arch = "amd64";
 switch (platform) {
